@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="exer5.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";</script>
+    <script type="module">
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-analytics.js";</script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="./exer5.js"></script>
+</head>
+
+<body>
+    <div class="background-image">
+        <img src="./assets/bg-desktop-dark.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                TODO
+            </div>
+            <div class="theme">
+                <img src="./assets/icon-sun.svg" alt="">
+            </div>
+        </div>
+
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+
+                </div>
+
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit="addItem(event)">
+                    <input id="todo-input" type="text" placeholder="Create a new todo...">
+
+                </form>
+
+            </div>
+
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./assets/icon-check.svg" alt="">
+
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="todo-items-info">
+                <div class="items-left">
+                    // ${todoCheckMarks.length}
+                    // <script>
+                        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        // let length =  fruits.length;
+
+                        // document.getElementById("demo").innerHTML = length;
+                        // 
+                    </script>
+                    items left
+                </div>
+                <div class="items-statuses">
+                    <span>All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div>
+                <div class="items-clear">
+                    <span onclick="compDeleter()">Clear Completed</span>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
